@@ -1,0 +1,10 @@
+/vendor/
+/node_modules/
+/.idea/
+/.mcp.json
+/.phpunit.cache/
+/dist/
+/assets/block/build/
+*~
+.env
+.DS_Store

@@ -1,0 +1,16 @@
+{
+	"name": "wxp-events-feed",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Block for the WXP Events Feed plugin.",
+	"license": "GPL-2.0-or-later",
+	"scripts": {
+		"build": "wp-scripts build assets/block/src/index.js --output-path=assets/block/build",
+		"start": "wp-scripts start assets/block/src/index.js --output-path=assets/block/build",
+		"lint:js": "wp-scripts lint-js assets/block/src"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^30.0.0",
+		"typescript": "^5.9.3"
+	}
+}

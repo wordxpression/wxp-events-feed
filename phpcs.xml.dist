@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<ruleset name="WXP Events Feed">
+	<description>WordPress Coding Standards with PHP 8.1+ compatibility checks.</description>
+
+	<file>wxp-events-feed.php</file>
+	<file>uninstall.php</file>
+	<file>src</file>
+
+	<arg name="extensions" value="php"/>
+	<arg value="sp"/>
+	<arg name="colors"/>
+
+	<config name="testVersion" value="8.1-"/>
+	<config name="minimum_wp_version" value="6.5"/>
+
+	<rule ref="PHPCompatibilityWP"/>
+
+	<rule ref="WordPress">
+		<!-- PSR-4 file names (FeedClient.php) instead of class-feed-client.php. -->
+		<exclude name="WordPress.Files.FileName"/>
+		<!-- Exception messages are reason codes for the settings page, never echoed into HTML. -->
+		<exclude name="WordPress.Security.EscapeOutput.ExceptionNotEscaped"/>
+	</rule>
+
+	<!-- The reading and checking classes are pure PHP on purpose, so their tests run without WordPress. -->
+	<rule ref="WordPress.WP.AlternativeFunctions">
+		<exclude-pattern>src/Feed/*</exclude-pattern>
+	</rule>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="wxp-events-feed"/>
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="WXP\EventsFeed"/>
+				<element value="wxp_events_feed"/>
+				<element value="wxp_ef"/>
+			</property>
+		</properties>
+	</rule>
+</ruleset>

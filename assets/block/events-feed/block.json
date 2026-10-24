@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "wxp/events-feed",
+	"title": "Events feed",
+	"category": "wxp-plugins",
+	"icon": "rss",
+	"description": "A list of the coming events of another website that runs WXP Local Events.",
+	"keywords": [ "events", "feed", "agenda", "list" ],
+	"textdomain": "wxp-events-feed",
+	"attributes": {
+		"limit": { "type": "number", "default": 5 },
+		"category": { "type": "string", "default": "" },
+		"image": { "type": "boolean", "default": true },
+		"imageSize": { "type": "string", "default": "thumbnail" },
+		"description": { "type": "boolean", "default": true },
+		"time": { "type": "boolean", "default": true },
+		"dateFrom": { "type": "string", "default": "site" },
+		"heading": { "type": "string", "default": "h3" }
+	},
+	"supports": {
+		"html": false,
+		"align": [ "wide", "full" ],
+		"anchor": true,
+		"customClassName": true
+	},
+	"editorScript": "wxp-events-feed-block"
+}

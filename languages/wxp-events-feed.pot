@@ -1,0 +1,355 @@
+# Copyright (C) 2026 Wilko van der Ploeg
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WXP Events Feed 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wxp-events-feed\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-24T21:17:04+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: wxp-events-feed\n"
+
+#. Plugin Name of the plugin
+#: wxp-events-feed.php
+msgid "WXP Events Feed"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: wxp-events-feed.php
+msgid "https://wxpplugins.com/wxp-events-feed/"
+msgstr ""
+
+#. Description of the plugin
+#: wxp-events-feed.php
+msgid "Show the coming events of another website that runs WXP Local Events, as a list with a block, a shortcode or an Elementor widget."
+msgstr ""
+
+#. Author of the plugin
+#: wxp-events-feed.php
+msgid "Wilko van der Ploeg"
+msgstr ""
+
+#. Author URI of the plugin
+#: wxp-events-feed.php
+msgid "https://wxpplugins.com"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:59
+#: src/Admin/SettingsPage.php:133
+msgid "Events Feed"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:84
+msgid "Settings"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:95
+msgid "Save the address of the events website first."
+msgstr ""
+
+#. translators: %d: number of events
+#: src/Admin/SettingsPage.php:103
+#, php-format
+msgid "Connected. The events website shares %d coming event."
+msgid_plural "Connected. The events website shares %d coming events."
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/Admin/SettingsPage.php:120
+msgid "The cache is emptied. The next visit fetches the events again."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:141
+msgid "Website with the events"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:144
+msgid "The address of the website that runs WXP Local Events. On that website, switch on Events → Settings → Share events."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:148
+msgid "Refresh the events every (minutes)"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:151
+msgid "The list is kept on this website for this long, so visitors never wait for the other website. If it does not answer, the last list stays visible."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:155
+msgid "Updates"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:158
+msgid "Look for new versions of this plugin on GitHub"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:159
+msgid "This plugin is not in the WordPress plugin directory. WordPress asks GitHub twice a day if a newer version exists, and sends nothing but the request itself."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:166
+msgid "Check and clean up"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:168
+msgid "Test the connection"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:169
+msgid "Empty the cache"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:172
+msgid "Show the events"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:173
+msgid "Add the block \"Events feed\" (category WXP Plugins), or the Elementor widget with the same name, or use the shortcode:"
+msgstr ""
+
+#: src/Admin/SettingsPage.php:176
+msgid "number of events, 1 to 20 (default 5)."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:177
+msgid "category slugs of the events website, comma separated."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:178
+msgid "yes or no."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:179
+msgid "thumbnail or medium."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:180
+msgid "\"site\" formats dates like this website does (default), \"source\" uses the text of the events website."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:181
+msgid "h2 to h6, or p, for the event titles (default h3)."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:182
+msgid "an extra CSS class."
+msgstr ""
+
+#: src/Admin/SettingsPage.php:209
+msgid "You are not allowed to do this."
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:37
+msgid "Events feed"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:79
+#: assets/block/build/index.js:1
+msgid "Events"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:84
+#: assets/block/build/index.js:1
+msgid "Number of events"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:94
+#: assets/block/build/index.js:1
+msgid "Categories"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:97
+#: assets/block/build/index.js:1
+msgid "Category slugs of the events website, comma separated. Empty shows all events."
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:103
+#: assets/block/build/index.js:1
+msgid "Image"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:112
+#: assets/block/build/index.js:1
+msgid "Image size"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:115
+#: assets/block/build/index.js:1
+msgid "Small"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:116
+#: assets/block/build/index.js:1
+msgid "Medium"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:125
+#: assets/block/build/index.js:1
+msgid "Short description"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:134
+#: assets/block/build/index.js:1
+msgid "Time"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:143
+#: assets/block/build/index.js:1
+msgid "Date format"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:146
+#: assets/block/build/index.js:1
+msgid "Like this website"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:147
+#: assets/block/build/index.js:1
+msgid "Like the events website"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:155
+#: assets/block/build/index.js:1
+msgid "Title element"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:174
+msgid "Style"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:181
+msgid "Image width"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:198
+msgid "Space between events"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:210
+msgid "Lines between events"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:220
+msgid "Date colour"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:230
+msgid "Title colour"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:240
+msgid "Description colour"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:251
+msgid "Date"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:259
+msgid "Title"
+msgstr ""
+
+#: src/Elementor/FeedWidget.php:267
+msgid "Description"
+msgstr ""
+
+#: src/Feed/FeedClient.php:115
+msgid "No events website is set yet. Fill in its address under Settings → Events Feed."
+msgstr ""
+
+#. translators: %s: technical reason
+#: src/Feed/FeedClient.php:118
+#, php-format
+msgid "The events website could not be reached (%s)."
+msgstr ""
+
+#. translators: %s: HTTP status code
+#: src/Feed/FeedClient.php:121
+#, php-format
+msgid "The events website answered with status %s."
+msgstr ""
+
+#: src/Feed/FeedClient.php:123
+msgid "The events website has not switched on sharing. On that website, go to Events → Settings → Share events."
+msgstr ""
+
+#: src/Feed/FeedClient.php:126
+msgid "The address does not give an event feed. Is WXP Local Events (version 0.14 or newer) active on that website?"
+msgstr ""
+
+#: src/Feed/FeedClient.php:128
+msgid "The events website uses a newer feed than this plugin understands. Update WXP Events Feed."
+msgstr ""
+
+#: src/Feed/FeedClient.php:130
+msgid "The events website did not answer a moment ago. It is tried again soon."
+msgstr ""
+
+#: src/Feed/FeedClient.php:132
+msgid "The events could not be loaded."
+msgstr ""
+
+#: src/Render/ListRenderer.php:39
+msgid "There are no upcoming events at the moment."
+msgstr ""
+
+#: src/Render/ListRenderer.php:79
+msgid "(opens in a new tab)"
+msgstr ""
+
+#: src/Update/GitHubUpdater.php:102
+msgid "Show the coming events of another website that runs WXP Local Events."
+msgstr ""
+
+#: wxp-events-feed.php:45
+msgid "WXP Events Feed is not loaded: it needs PHP 8.1 or higher."
+msgstr ""
+
+#: wxp-events-feed.php:48
+msgid "WXP Events Feed is not loaded: another copy of this plugin is already active. Deactivate one of them."
+msgstr ""
+
+#. translators: %s: technical error message
+#: wxp-events-feed.php:52
+#, php-format
+msgid "WXP Events Feed could not start: %s"
+msgstr ""
+
+#: assets/block/build/index.js:1
+msgid "Show"
+msgstr ""
+
+#: assets/block/events-feed/block.json
+msgctxt "block title"
+msgid "Events feed"
+msgstr ""
+
+#: assets/block/events-feed/block.json
+msgctxt "block description"
+msgid "A list of the coming events of another website that runs WXP Local Events."
+msgstr ""
+
+#: assets/block/events-feed/block.json
+msgctxt "block keyword"
+msgid "events"
+msgstr ""
+
+#: assets/block/events-feed/block.json
+msgctxt "block keyword"
+msgid "feed"
+msgstr ""
+
+#: assets/block/events-feed/block.json
+msgctxt "block keyword"
+msgid "agenda"
+msgstr ""
+
+#: assets/block/events-feed/block.json
+msgctxt "block keyword"
+msgid "list"
+msgstr ""

@@ -1,0 +1,113 @@
+/*
+ * WXP Events Feed. Minimal on purpose: colours and fonts come from the theme.
+ * Change the look with these custom properties, or with the .wxp-ef__* classes.
+ */
+.wxp-ef {
+	--wxp-ef-gap: 1.25rem;
+	--wxp-ef-image-size: 96px;
+	--wxp-ef-date-color: inherit;
+	--wxp-ef-date-size: 0.875em;
+	--wxp-ef-title-size: 1.125em;
+	--wxp-ef-line: rgba(127, 127, 127, 0.3);
+}
+
+.wxp-ef__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.wxp-ef__item {
+	display: flex;
+	gap: 1rem;
+	align-items: flex-start;
+	margin: 0;
+	padding: 0 0 var(--wxp-ef-gap);
+}
+
+.wxp-ef__item + .wxp-ef__item {
+	padding-top: var(--wxp-ef-gap);
+	border-top: 1px solid var(--wxp-ef-line);
+}
+
+.wxp-ef__image {
+	flex: 0 0 var(--wxp-ef-image-size);
+	display: block;
+	line-height: 0;
+}
+
+.wxp-ef__image img {
+	display: block;
+	width: var(--wxp-ef-image-size);
+	height: var(--wxp-ef-image-size);
+	object-fit: cover;
+	border-radius: 4px;
+}
+
+.wxp-ef__body {
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.wxp-ef__date {
+	display: block;
+	color: var(--wxp-ef-date-color);
+	font-size: var(--wxp-ef-date-size);
+	opacity: 0.8;
+}
+
+.wxp-ef__title {
+	margin: 0.15em 0 0;
+	font-size: var(--wxp-ef-title-size);
+	line-height: 1.3;
+}
+
+.wxp-ef__title a {
+	text-decoration: none;
+}
+
+.wxp-ef__title a:hover,
+.wxp-ef__title a:focus {
+	text-decoration: underline;
+}
+
+.wxp-ef__description {
+	margin: 0.4em 0 0;
+}
+
+.wxp-ef__empty {
+	margin: 0;
+}
+
+.wxp-ef--error {
+	padding: 0.75em 1em;
+	border-left: 4px solid #d63638;
+	background: rgba(214, 54, 56, 0.08);
+}
+
+.wxp-ef .screen-reader-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+/* Medium images are wider. */
+.wxp-ef--medium {
+	--wxp-ef-image-size: 160px;
+}
+
+@media (max-width: 480px) {
+	.wxp-ef {
+		--wxp-ef-image-size: 72px;
+	}
+
+	.wxp-ef--medium {
+		--wxp-ef-image-size: 110px;
+	}
+}
