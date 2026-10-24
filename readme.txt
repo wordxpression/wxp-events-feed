@@ -4,7 +4,7 @@ Tags: events, feed, agenda, list, local events
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -77,6 +77,9 @@ Visitors see nothing when the list cannot be loaded, to keep your pages clean. A
 The list is kept for the time set in the settings (default 60 minutes). Use "Empty the cache" to see the change at once.
 
 == Changelog ==
+
+= 0.1.1 =
+* Fix: "Test the connection" now tests the address as it is in the field, also when it is not saved yet. The address stays in the field afterwards, with a reminder to save it.
 
 = 0.1.0 =
 * First version: block, shortcode and Elementor widget, with a cache that never makes visitors wait.

@@ -10,6 +10,7 @@ declare( strict_types=1 );
 namespace WXP\EventsFeed\Admin;
 
 use WXP\EventsFeed\Feed\FeedClient;
+use WXP\EventsFeed\Feed\SourceUrl;
 use WXP\EventsFeed\Settings\Settings;
 use WXP\EventsFeed\Shortcode\FeedShortcode;
 
@@ -86,13 +87,15 @@ final class SettingsPage {
 	}
 
 	/**
-	 * Tests the connection with the saved address.
+	 * Tests the connection with the address as it is in the field, saved or not. The address is not saved, but it
+	 * stays in the field when the page comes back.
 	 */
 	public function test(): void {
-		$this->guard( self::TEST_ACTION );
-		$source = Settings::source_url();
+		$this->guard( self::TEST_ACTION, 'wxp_ef_nonce' );
+		$typed  = isset( $_POST[ Settings::OPTION ]['source_url'] ) ? sanitize_text_field( wp_unslash( (string) $_POST[ Settings::OPTION ]['source_url'] ) ) : ''; // phpcs:ignore WordPress.Security.NonceVerification.Missing -- checked in guard().
+		$source = '' !== $typed ? SourceUrl::normalize( $typed ) : Settings::source_url();
 		if ( '' === $source ) {
-			$this->notice( 'error', __( 'Save the address of the events website first.', 'wxp-events-feed' ) );
+			$this->notice( 'error', __( 'Fill in the address of the events website first.', 'wxp-events-feed' ), $typed );
 		} else {
 			$result = $this->client->fetch( $source, 5 );
 			if ( $result->usable() ) {
@@ -102,10 +105,11 @@ final class SettingsPage {
 						/* translators: %d: number of events */
 						_n( 'Connected. The events website shares %d coming event.', 'Connected. The events website shares %d coming events.', count( $result->items ), 'wxp-events-feed' ),
 						count( $result->items )
-					)
+					),
+					$typed
 				);
 			} else {
-				$this->notice( 'error', $this->client->message( $result ) );
+				$this->notice( 'error', $this->client->message( $result ), $typed );
 			}
 		}
 		$this->back();
@@ -131,7 +135,7 @@ final class SettingsPage {
 		?>
 		<div class="wrap">
 			<h1><?php esc_html_e( 'Events Feed', 'wxp-events-feed' ); ?></h1>
-			<?php $this->show_notice(); ?>
+			<?php $draft = $this->show_notice(); ?>
 			<?php settings_errors(); ?>
 
 			<form method="post" action="options.php">
@@ -140,7 +144,7 @@ final class SettingsPage {
 					<tr>
 						<th scope="row"><label for="wxp-ef-source"><?php esc_html_e( 'Website with the events', 'wxp-events-feed' ); ?></label></th>
 						<td>
-							<input type="text" id="wxp-ef-source" class="regular-text code" name="<?php echo esc_attr( Settings::OPTION ); ?>[source_url]" value="<?php echo esc_attr( Settings::source_url() ); ?>" placeholder="https://events.example.com" />
+							<input type="text" id="wxp-ef-source" class="regular-text code" name="<?php echo esc_attr( Settings::OPTION ); ?>[source_url]" value="<?php echo esc_attr( $draft ?? Settings::source_url() ); ?>" placeholder="https://events.example.com" />
 							<p class="description"><?php esc_html_e( 'The address of the website that runs WXP Local Events. On that website, switch on Events → Settings → Share events.', 'wxp-events-feed' ); ?></p>
 						</td>
 					</tr>
@@ -160,12 +164,15 @@ final class SettingsPage {
 						</td>
 					</tr>
 				</table>
-				<?php submit_button(); ?>
+				<p class="submit">
+					<?php submit_button( null, 'primary', 'submit', false ); ?>
+					<?php wp_nonce_field( self::TEST_ACTION, 'wxp_ef_nonce', false ); ?>
+					<button type="submit" class="button" name="action" value="<?php echo esc_attr( self::TEST_ACTION ); ?>" formaction="<?php echo esc_url( admin_url( 'admin-post.php' ) ); ?>"><?php esc_html_e( 'Test the connection', 'wxp-events-feed' ); ?></button>
+				</p>
 			</form>
 
 			<h2><?php esc_html_e( 'Check and clean up', 'wxp-events-feed' ); ?></h2>
 			<p>
-				<?php $this->button( self::TEST_ACTION, __( 'Test the connection', 'wxp-events-feed' ) ); ?>
 				<?php $this->button( self::CLEAR_ACTION, __( 'Empty the cache', 'wxp-events-feed' ) ); ?>
 			</p>
 
@@ -203,12 +210,13 @@ final class SettingsPage {
 	 * Stops when the user may not do this or the link is not genuine.
 	 *
 	 * @param string $action Action name, also the nonce action.
+	 * @param string $field  Name of the form field that holds the nonce.
 	 */
-	private function guard( string $action ): void {
+	private function guard( string $action, string $field = '_wpnonce' ): void {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			wp_die( esc_html__( 'You are not allowed to do this.', 'wxp-events-feed' ), '', array( 'response' => 403 ) );
 		}
-		check_admin_referer( $action );
+		check_admin_referer( $action, $field );
 	}
 
 	/**
@@ -216,13 +224,15 @@ final class SettingsPage {
 	 *
 	 * @param string $type    success or error.
 	 * @param string $message Text.
+	 * @param string $draft   The address as typed in the field, to put back there.
 	 */
-	private function notice( string $type, string $message ): void {
+	private function notice( string $type, string $message, string $draft = '' ): void {
 		set_transient(
 			'wxp_ef_notice_' . get_current_user_id(),
 			array(
 				'type'    => $type,
 				'message' => $message,
+				'draft'   => $draft,
 			),
 			MINUTE_IN_SECONDS
 		);
@@ -230,19 +240,28 @@ final class SettingsPage {
 
 	/**
 	 * Shows and forgets the remembered message.
+	 *
+	 * @return string|null The address that was typed before the test, to show in the field again; null when there is none.
 	 */
-	private function show_notice(): void {
+	private function show_notice(): ?string {
 		$key    = 'wxp_ef_notice_' . get_current_user_id();
 		$notice = get_transient( $key );
 		if ( ! is_array( $notice ) ) {
-			return;
+			return null;
 		}
 		delete_transient( $key );
+
+		$message = (string) $notice['message'];
+		$draft   = (string) ( $notice['draft'] ?? '' );
+		if ( '' !== $draft && SourceUrl::normalize( $draft ) !== Settings::source_url() ) {
+			$message .= ' ' . __( 'The address is not saved yet: press Save changes.', 'wxp-events-feed' );
+		}
 		printf(
 			'<div class="notice notice-%s is-dismissible"><p>%s</p></div>',
 			'success' === $notice['type'] ? 'success' : 'error',
-			esc_html( (string) $notice['message'] )
+			esc_html( $message )
 		);
+		return '' !== $draft ? $draft : null;
 	}
 
 	/**

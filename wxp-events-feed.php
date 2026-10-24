@@ -3,7 +3,7 @@
  * Plugin Name:       WXP Events Feed
  * Plugin URI:        https://wxpplugins.com/wxp-events-feed/
  * Description:       Show the coming events of another website that runs WXP Local Events, as a list with a block, a shortcode or an Elementor widget.
- * Version:           0.1.0
+ * Version:           0.1.1
  * Requires at least: 6.5
  * Requires PHP:      8.1
  * Author:            Wilko van der Ploeg
@@ -68,7 +68,7 @@ if ( version_compare( PHP_VERSION, '8.1', '<' ) ) {
 	return;
 }
 
-const VERSION     = '0.1.0';
+const VERSION     = '0.1.1';
 const PLUGIN_FILE = __FILE__;
 const TEXT_DOMAIN = 'wxp-events-feed';
 
