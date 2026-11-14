@@ -4,7 +4,7 @@ Tags: events, feed, agenda, list, local events
 Requires at least: 6.5
 Tested up to: 7.1
 Requires PHP: 8.1
-Stable tag: 0.1.1
+Stable tag: 1.1.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -77,6 +77,10 @@ Visitors see nothing when the list cannot be loaded, to keep your pages clean. A
 The list is kept for the time set in the settings (default 60 minutes). Use "Empty the cache" to see the change at once.
 
 == Changelog ==
+
+= 1.1.0 =
+* New: the shortcode is described for WXP Shortcode Assistant, a free plugin that builds shortcodes from a form.
+* New texts translated (nl_NL, nl_NL_formal, de_DE, fr_FR). The version number follows the 1.1 release of the other WXP plugins.
 
 = 0.1.1 =
 * Fix: "Test the connection" now tests the address as it is in the field, also when it is not saved yet. The address stays in the field afterwards, with a reminder to save it.

@@ -40,7 +40,7 @@ namespace WXP\EventsFeed\Tests\Unit {
 			$this->assertSame( $accepted, $names );
 			// The defaults of the description are the defaults of the shortcode.
 			foreach ( $fields as $field ) {
-				$this->assertSame( FeedShortcode::defaults()[ $field['name'] ], (string) $field['default'], $field['name'] );
+				$this->assertSame( FeedShortcode::defaults()[ $field['name'] ], (string) ( $field['default'] ?? '' ), $field['name'] );
 			}
 		}
 	}
