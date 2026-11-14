@@ -46,6 +46,7 @@ final class FeedShortcode {
 	 */
 	public function register(): void {
 		add_shortcode( self::TAG, array( $this, 'shortcode' ) );
+		( new AssistantDescription() )->register();
 		add_action( 'init', array( self::class, 'register_style' ) );
 	}
 
