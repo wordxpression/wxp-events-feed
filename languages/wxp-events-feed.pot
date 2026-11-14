@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: WXP Events Feed 0.1.0\n"
+"Project-Id-Version: WXP Events Feed 0.1.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wxp-events-feed\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-24T21:39:36+00:00\n"
+"POT-Creation-Date: 2026-11-14T20:34:56+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: wxp-events-feed\n"
@@ -41,6 +41,7 @@ msgstr ""
 
 #: src/Admin/SettingsPage.php:60
 #: src/Admin/SettingsPage.php:137
+#: src/Shortcode/AssistantDescription.php:37
 msgid "Events Feed"
 msgstr ""
 
@@ -154,71 +155,91 @@ msgstr ""
 
 #: src/Elementor/FeedWidget.php:79
 #: assets/block/build/index.js:1
+#: assets/block/src/edit.js:19
 msgid "Events"
 msgstr ""
 
 #: src/Elementor/FeedWidget.php:84
+#: src/Shortcode/AssistantDescription.php:46
 #: assets/block/build/index.js:1
+#: assets/block/src/edit.js:22
 msgid "Number of events"
 msgstr ""
 
 #: src/Elementor/FeedWidget.php:94
+#: src/Shortcode/AssistantDescription.php:55
 #: assets/block/build/index.js:1
+#: assets/block/src/edit.js:33
 msgid "Categories"
 msgstr ""
 
 #: src/Elementor/FeedWidget.php:97
 #: assets/block/build/index.js:1
+#: assets/block/src/edit.js:34
 msgid "Category slugs of the events website, comma separated. Empty shows all events."
 msgstr ""
 
 #: src/Elementor/FeedWidget.php:103
 #: assets/block/build/index.js:1
+#: assets/block/src/edit.js:47
 msgid "Image"
 msgstr ""
 
 #: src/Elementor/FeedWidget.php:112
+#: src/Shortcode/AssistantDescription.php:94
 #: assets/block/build/index.js:1
+#: assets/block/src/edit.js:54
 msgid "Image size"
 msgstr ""
 
 #: src/Elementor/FeedWidget.php:115
+#: src/Shortcode/AssistantDescription.php:99
 #: assets/block/build/index.js:1
+#: assets/block/src/edit.js:59
 msgid "Small"
 msgstr ""
 
 #: src/Elementor/FeedWidget.php:116
+#: src/Shortcode/AssistantDescription.php:100
 #: assets/block/build/index.js:1
+#: assets/block/src/edit.js:63
 msgid "Medium"
 msgstr ""
 
 #: src/Elementor/FeedWidget.php:125
 #: assets/block/build/index.js:1
+#: assets/block/src/edit.js:73
 msgid "Short description"
 msgstr ""
 
 #: src/Elementor/FeedWidget.php:134
 #: assets/block/build/index.js:1
+#: assets/block/src/edit.js:81
 msgid "Time"
 msgstr ""
 
 #: src/Elementor/FeedWidget.php:143
+#: src/Shortcode/AssistantDescription.php:83
 #: assets/block/build/index.js:1
+#: assets/block/src/edit.js:87
 msgid "Date format"
 msgstr ""
 
 #: src/Elementor/FeedWidget.php:146
 #: assets/block/build/index.js:1
+#: assets/block/src/edit.js:92
 msgid "Like this website"
 msgstr ""
 
 #: src/Elementor/FeedWidget.php:147
 #: assets/block/build/index.js:1
+#: assets/block/src/edit.js:99
 msgid "Like the events website"
 msgstr ""
 
 #: src/Elementor/FeedWidget.php:155
 #: assets/block/build/index.js:1
+#: assets/block/src/edit.js:111
 msgid "Title element"
 msgstr ""
 
@@ -306,6 +327,54 @@ msgstr ""
 msgid "(opens in a new tab)"
 msgstr ""
 
+#: src/Shortcode/AssistantDescription.php:32
+msgid "What to show"
+msgstr ""
+
+#: src/Shortcode/AssistantDescription.php:33
+msgid "Look"
+msgstr ""
+
+#: src/Shortcode/AssistantDescription.php:41
+msgid "Events from another site"
+msgstr ""
+
+#: src/Shortcode/AssistantDescription.php:42
+msgid "A list of the next events of the site you connected under Settings > Events Feed."
+msgstr ""
+
+#: src/Shortcode/AssistantDescription.php:58
+msgid "The slugs of categories on the other site, separated by commas. Empty: all events."
+msgstr ""
+
+#: src/Shortcode/AssistantDescription.php:62
+msgid "Show images"
+msgstr ""
+
+#: src/Shortcode/AssistantDescription.php:69
+msgid "Show the short description"
+msgstr ""
+
+#: src/Shortcode/AssistantDescription.php:76
+msgid "Show the time"
+msgstr ""
+
+#: src/Shortcode/AssistantDescription.php:88
+msgid "The date format of this site"
+msgstr ""
+
+#: src/Shortcode/AssistantDescription.php:89
+msgid "The date as the other site writes it"
+msgstr ""
+
+#: src/Shortcode/AssistantDescription.php:106
+msgid "Element of the titles"
+msgstr ""
+
+#: src/Shortcode/AssistantDescription.php:114
+msgid "Extra CSS class"
+msgstr ""
+
 #: src/Update/GitHubUpdater.php:102
 msgid "Show the coming events of another website that runs WXP Local Events."
 msgstr ""
@@ -325,6 +394,7 @@ msgid "WXP Events Feed could not start: %s"
 msgstr ""
 
 #: assets/block/build/index.js:1
+#: assets/block/src/edit.js:44
 msgid "Show"
 msgstr ""
 

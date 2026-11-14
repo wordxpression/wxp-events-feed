@@ -16,12 +16,12 @@ msgstr ""
 #. Plugin Name of the plugin
 #: wxp-events-feed.php
 msgid "WXP Events Feed"
-msgstr ""
+msgstr "WXP Events Feed"
 
 #. Plugin URI of the plugin
 #: wxp-events-feed.php
 msgid "https://wxpplugins.com/wxp-events-feed/"
-msgstr ""
+msgstr "https://wxpplugins.com/wxp-events-feed/"
 
 #. Description of the plugin
 #: wxp-events-feed.php
@@ -31,14 +31,16 @@ msgstr "Zeigt die kommenden Veranstaltungen einer anderen Website, auf der WXP L
 #. Author of the plugin
 #: wxp-events-feed.php
 msgid "Wilko van der Ploeg"
-msgstr ""
+msgstr "Wilko van der Ploeg"
 
 #. Author URI of the plugin
 #: wxp-events-feed.php
 msgid "https://wxpplugins.com"
-msgstr ""
+msgstr "https://wxpplugins.com"
 
-#: src/Admin/SettingsPage.php:60 src/Admin/SettingsPage.php:137
+#: src/Admin/SettingsPage.php:60
+#: src/Admin/SettingsPage.php:137
+#: src/Shortcode/AssistantDescription.php:37
 msgid "Events Feed"
 msgstr "Veranstaltungs-Feed"
 
@@ -52,6 +54,7 @@ msgstr "Tragen Sie zuerst die Adresse der Veranstaltungswebsite ein."
 
 #. translators: %d: number of events
 #: src/Admin/SettingsPage.php:106
+#, php-format
 msgid "Connected. The events website shares %d coming event."
 msgid_plural "Connected. The events website shares %d coming events."
 msgstr[0] "Verbunden. Die Veranstaltungswebsite teilt %d kommende Veranstaltung."
@@ -149,59 +152,93 @@ msgstr "Die Adresse ist noch nicht gespeichert: Klicken Sie auf „Änderungen s
 msgid "Events feed"
 msgstr "Veranstaltungs-Feed"
 
-#: src/Elementor/FeedWidget.php:79 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:79
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:19
 msgid "Events"
 msgstr "Veranstaltungen"
 
-#: src/Elementor/FeedWidget.php:84 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:84
+#: src/Shortcode/AssistantDescription.php:46
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:22
 msgid "Number of events"
 msgstr "Anzahl der Veranstaltungen"
 
-#: src/Elementor/FeedWidget.php:94 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:94
+#: src/Shortcode/AssistantDescription.php:55
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:33
 msgid "Categories"
 msgstr "Kategorien"
 
-#: src/Elementor/FeedWidget.php:97 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:97
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:34
 msgid "Category slugs of the events website, comma separated. Empty shows all events."
 msgstr "Kategorie-Slugs der Veranstaltungswebsite, durch Kommas getrennt. Leer zeigt alle Veranstaltungen."
 
-#: src/Elementor/FeedWidget.php:103 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:103
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:47
 msgid "Image"
 msgstr "Bild"
 
-#: src/Elementor/FeedWidget.php:112 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:112
+#: src/Shortcode/AssistantDescription.php:94
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:54
 msgid "Image size"
 msgstr "Bildgröße"
 
-#: src/Elementor/FeedWidget.php:115 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:115
+#: src/Shortcode/AssistantDescription.php:99
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:59
 msgid "Small"
 msgstr "Klein"
 
-#: src/Elementor/FeedWidget.php:116 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:116
+#: src/Shortcode/AssistantDescription.php:100
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:63
 msgid "Medium"
 msgstr "Mittel"
 
-#: src/Elementor/FeedWidget.php:125 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:125
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:73
 msgid "Short description"
 msgstr "Kurzbeschreibung"
 
-#: src/Elementor/FeedWidget.php:134 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:134
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:81
 msgid "Time"
 msgstr "Uhrzeit"
 
-#: src/Elementor/FeedWidget.php:143 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:143
+#: src/Shortcode/AssistantDescription.php:83
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:87
 msgid "Date format"
 msgstr "Datumsformat"
 
-#: src/Elementor/FeedWidget.php:146 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:146
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:92
 msgid "Like this website"
 msgstr "Wie diese Website"
 
-#: src/Elementor/FeedWidget.php:147 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:147
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:99
 msgid "Like the events website"
 msgstr "Wie die Veranstaltungswebsite"
 
-#: src/Elementor/FeedWidget.php:155 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:155
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:111
 msgid "Title element"
 msgstr "Titelelement"
 
@@ -251,11 +288,13 @@ msgstr "Es ist noch keine Veranstaltungswebsite eingestellt. Tragen Sie die Adre
 
 #. translators: %s: technical reason
 #: src/Feed/FeedClient.php:118
+#, php-format
 msgid "The events website could not be reached (%s)."
 msgstr "Die Veranstaltungswebsite konnte nicht erreicht werden (%s)."
 
 #. translators: %s: HTTP status code
 #: src/Feed/FeedClient.php:121
+#, php-format
 msgid "The events website answered with status %s."
 msgstr "Die Veranstaltungswebsite antwortete mit Status %s."
 
@@ -301,10 +340,12 @@ msgstr "WXP Events Feed wurde nicht geladen: Eine andere Kopie dieses Plugins is
 
 #. translators: %s: technical error message
 #: wxp-events-feed.php:52
+#, php-format
 msgid "WXP Events Feed could not start: %s"
 msgstr "WXP Events Feed konnte nicht starten: %s"
 
 #: assets/block/build/index.js:1
+#: assets/block/src/edit.js:44
 msgid "Show"
 msgstr "Anzeigen"
 
@@ -338,3 +379,50 @@ msgctxt "block keyword"
 msgid "list"
 msgstr "Liste"
 
+#: src/Shortcode/AssistantDescription.php:32
+msgid "What to show"
+msgstr "Was angezeigt wird"
+
+#: src/Shortcode/AssistantDescription.php:33
+msgid "Look"
+msgstr "Aussehen"
+
+#: src/Shortcode/AssistantDescription.php:41
+msgid "Events from another site"
+msgstr "Veranstaltungen von einer anderen Website"
+
+#: src/Shortcode/AssistantDescription.php:42
+msgid "A list of the next events of the site you connected under Settings > Events Feed."
+msgstr "Eine Liste der nächsten Veranstaltungen der Website, die Sie unter Einstellungen > Veranstaltungs-Feed verbunden haben."
+
+#: src/Shortcode/AssistantDescription.php:58
+msgid "The slugs of categories on the other site, separated by commas. Empty: all events."
+msgstr "Die Slugs der Kategorien auf der anderen Website, durch Kommas getrennt. Leer: alle Veranstaltungen."
+
+#: src/Shortcode/AssistantDescription.php:62
+msgid "Show images"
+msgstr "Bilder anzeigen"
+
+#: src/Shortcode/AssistantDescription.php:69
+msgid "Show the short description"
+msgstr "Die Kurzbeschreibung anzeigen"
+
+#: src/Shortcode/AssistantDescription.php:76
+msgid "Show the time"
+msgstr "Die Uhrzeit anzeigen"
+
+#: src/Shortcode/AssistantDescription.php:88
+msgid "The date format of this site"
+msgstr "Das Datumsformat dieser Website"
+
+#: src/Shortcode/AssistantDescription.php:89
+msgid "The date as the other site writes it"
+msgstr "Das Datum so, wie die andere Website es schreibt"
+
+#: src/Shortcode/AssistantDescription.php:106
+msgid "Element of the titles"
+msgstr "Element der Titel"
+
+#: src/Shortcode/AssistantDescription.php:114
+msgid "Extra CSS class"
+msgstr "Zusätzliche CSS-Klasse"

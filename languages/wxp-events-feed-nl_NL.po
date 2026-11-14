@@ -16,12 +16,12 @@ msgstr ""
 #. Plugin Name of the plugin
 #: wxp-events-feed.php
 msgid "WXP Events Feed"
-msgstr ""
+msgstr "WXP Events Feed"
 
 #. Plugin URI of the plugin
 #: wxp-events-feed.php
 msgid "https://wxpplugins.com/wxp-events-feed/"
-msgstr ""
+msgstr "https://wxpplugins.com/wxp-events-feed/"
 
 #. Description of the plugin
 #: wxp-events-feed.php
@@ -31,14 +31,16 @@ msgstr "Toon de komende evenementen van een andere website waarop WXP Local Even
 #. Author of the plugin
 #: wxp-events-feed.php
 msgid "Wilko van der Ploeg"
-msgstr ""
+msgstr "Wilko van der Ploeg"
 
 #. Author URI of the plugin
 #: wxp-events-feed.php
 msgid "https://wxpplugins.com"
-msgstr ""
+msgstr "https://wxpplugins.com"
 
-#: src/Admin/SettingsPage.php:60 src/Admin/SettingsPage.php:137
+#: src/Admin/SettingsPage.php:60
+#: src/Admin/SettingsPage.php:137
+#: src/Shortcode/AssistantDescription.php:37
 msgid "Events Feed"
 msgstr "Evenementenfeed"
 
@@ -52,6 +54,7 @@ msgstr "Vul eerst het adres van de evenementenwebsite in."
 
 #. translators: %d: number of events
 #: src/Admin/SettingsPage.php:106
+#, php-format
 msgid "Connected. The events website shares %d coming event."
 msgid_plural "Connected. The events website shares %d coming events."
 msgstr[0] "Verbonden. De evenementenwebsite deelt %d komend evenement."
@@ -149,59 +152,93 @@ msgstr "Het adres is nog niet opgeslagen: klik op Wijzigingen opslaan."
 msgid "Events feed"
 msgstr "Evenementenfeed"
 
-#: src/Elementor/FeedWidget.php:79 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:79
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:19
 msgid "Events"
 msgstr "Evenementen"
 
-#: src/Elementor/FeedWidget.php:84 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:84
+#: src/Shortcode/AssistantDescription.php:46
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:22
 msgid "Number of events"
 msgstr "Aantal evenementen"
 
-#: src/Elementor/FeedWidget.php:94 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:94
+#: src/Shortcode/AssistantDescription.php:55
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:33
 msgid "Categories"
 msgstr "Categorieën"
 
-#: src/Elementor/FeedWidget.php:97 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:97
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:34
 msgid "Category slugs of the events website, comma separated. Empty shows all events."
 msgstr "Categorie-slugs van de evenementenwebsite, gescheiden door komma's. Leeg toont alle evenementen."
 
-#: src/Elementor/FeedWidget.php:103 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:103
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:47
 msgid "Image"
 msgstr "Afbeelding"
 
-#: src/Elementor/FeedWidget.php:112 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:112
+#: src/Shortcode/AssistantDescription.php:94
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:54
 msgid "Image size"
 msgstr "Afbeeldingsgrootte"
 
-#: src/Elementor/FeedWidget.php:115 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:115
+#: src/Shortcode/AssistantDescription.php:99
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:59
 msgid "Small"
 msgstr "Klein"
 
-#: src/Elementor/FeedWidget.php:116 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:116
+#: src/Shortcode/AssistantDescription.php:100
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:63
 msgid "Medium"
 msgstr "Gemiddeld"
 
-#: src/Elementor/FeedWidget.php:125 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:125
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:73
 msgid "Short description"
 msgstr "Korte omschrijving"
 
-#: src/Elementor/FeedWidget.php:134 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:134
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:81
 msgid "Time"
 msgstr "Tijd"
 
-#: src/Elementor/FeedWidget.php:143 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:143
+#: src/Shortcode/AssistantDescription.php:83
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:87
 msgid "Date format"
 msgstr "Datumnotatie"
 
-#: src/Elementor/FeedWidget.php:146 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:146
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:92
 msgid "Like this website"
 msgstr "Zoals deze website"
 
-#: src/Elementor/FeedWidget.php:147 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:147
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:99
 msgid "Like the events website"
 msgstr "Zoals de evenementenwebsite"
 
-#: src/Elementor/FeedWidget.php:155 assets/block/build/index.js:1
+#: src/Elementor/FeedWidget.php:155
+#: assets/block/build/index.js:1
+#: assets/block/src/edit.js:111
 msgid "Title element"
 msgstr "Titelelement"
 
@@ -251,11 +288,13 @@ msgstr "Er is nog geen evenementenwebsite ingesteld. Vul het adres in onder Inst
 
 #. translators: %s: technical reason
 #: src/Feed/FeedClient.php:118
+#, php-format
 msgid "The events website could not be reached (%s)."
 msgstr "De evenementenwebsite kon niet worden bereikt (%s)."
 
 #. translators: %s: HTTP status code
 #: src/Feed/FeedClient.php:121
+#, php-format
 msgid "The events website answered with status %s."
 msgstr "De evenementenwebsite antwoordde met status %s."
 
@@ -301,10 +340,12 @@ msgstr "WXP Events Feed is niet geladen: er is al een andere kopie van deze plug
 
 #. translators: %s: technical error message
 #: wxp-events-feed.php:52
+#, php-format
 msgid "WXP Events Feed could not start: %s"
 msgstr "WXP Events Feed kon niet starten: %s"
 
 #: assets/block/build/index.js:1
+#: assets/block/src/edit.js:44
 msgid "Show"
 msgstr "Tonen"
 
@@ -338,3 +379,50 @@ msgctxt "block keyword"
 msgid "list"
 msgstr "lijst"
 
+#: src/Shortcode/AssistantDescription.php:32
+msgid "What to show"
+msgstr "Wat te tonen"
+
+#: src/Shortcode/AssistantDescription.php:33
+msgid "Look"
+msgstr "Uiterlijk"
+
+#: src/Shortcode/AssistantDescription.php:41
+msgid "Events from another site"
+msgstr "Evenementen van een andere site"
+
+#: src/Shortcode/AssistantDescription.php:42
+msgid "A list of the next events of the site you connected under Settings > Events Feed."
+msgstr "Een lijst met de eerstvolgende evenementen van de site die is gekoppeld onder Instellingen > Evenementenfeed."
+
+#: src/Shortcode/AssistantDescription.php:58
+msgid "The slugs of categories on the other site, separated by commas. Empty: all events."
+msgstr "De slugs van categorieën op de andere site, gescheiden door komma's. Leeg: alle evenementen."
+
+#: src/Shortcode/AssistantDescription.php:62
+msgid "Show images"
+msgstr "Afbeeldingen tonen"
+
+#: src/Shortcode/AssistantDescription.php:69
+msgid "Show the short description"
+msgstr "De korte beschrijving tonen"
+
+#: src/Shortcode/AssistantDescription.php:76
+msgid "Show the time"
+msgstr "De tijd tonen"
+
+#: src/Shortcode/AssistantDescription.php:88
+msgid "The date format of this site"
+msgstr "De datumnotatie van deze site"
+
+#: src/Shortcode/AssistantDescription.php:89
+msgid "The date as the other site writes it"
+msgstr "De datum zoals de andere site die schrijft"
+
+#: src/Shortcode/AssistantDescription.php:106
+msgid "Element of the titles"
+msgstr "Element van de titels"
+
+#: src/Shortcode/AssistantDescription.php:114
+msgid "Extra CSS class"
+msgstr "Extra CSS-klasse"
